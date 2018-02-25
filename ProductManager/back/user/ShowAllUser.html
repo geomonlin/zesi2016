@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>商城后台管理</title>
+
+		<!-- Bootstrap -->
+		<link href="../../css/bootstrap.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="../../css/dashboard.css" rel="stylesheet">
+	</head>
+	<body>
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#" style="font-size: 30px">商城后台管理</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+
+						<li>
+							<a href="#">
+								<span class="glyphicon glyphicon-user" aria-hidden="true"></span>欢迎：admins 使用系统
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="glyphicon glyphicon-off" aria-hidden="true"></span>退出
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container-fluid">
+			<div class="row">
+				<!--菜单-->
+				<div class="col-sm-3 col-md-2  sidebar">
+
+					<ul class="nav nav-pills nav-stacked">
+						<li>
+							<a href="../product/ShowAllProduct.html">商品管理</a>
+						</li>
+						<li>
+							<a href="../category/ShowAllCategory.html">类别管理</a>
+						</li>
+						<li class="active">
+							<a href="ShowAllUser.html">会员管理</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+					<h1 class="page-header"><span style="font-size: 25px; font-family: '微软雅黑';">会员管理 · 会员列表</span></h1>
+					<div class="row">
+						<div class='col-md-3'>
+							<a href="AddUser.html"><button class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> 添加会员</button></a>
+							<a href="#">
+								<button class="btn btn-primary">
+									<span class="glyphicon glyphicon-floppy-save"></span> 导出Excel									
+								</button>
+							</a>
+						</div>
+						<div class="col-md-5">
+							<!--<div class="form-group form-group-sm">
+									<label for="vip" style="text-align: right;" class="control-label col-sm-2">vip</label>
+									<div class="col-sm-3">
+										<select class="form-control" name='vip' id="vip">
+											<option value="0">0</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+								</div>-->
+						</div>
+						<div class="col-md-4">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="输入会员信息关键词">
+								<span class="input-group-btn">
+        <button class="btn btn-success" type="button"><span class="glyphicon glyphicon-search"></span> 搜索</button>
+								</span>
+							</div>
+
+						</div>
+					</div>
+					<!--列表展示-->
+					<div id="row" style="height: 20px;">
+
+					</div>
+					<div class="table-responsive">
+						<table class="table table-hover table-bordered table-condensed">
+							<thead>
+								<tr class="success">
+									<th style="text-align: center;" width="60px"><input class="btn btn-danger btn-xs" type="submit" value="删除" /></th>
+									<th></th>
+									<th>用户名</th>
+									<th>邮箱</th>
+									<th>手机号</th>
+									<th><a href="#">出生日期 <span class="glyphicon glyphicon-triangle-bottom"></span></a></th>
+									<th><a href="#">注册时间<span class="glyphicon glyphicon-triangle-bottom"></span></a></th>
+									<th>vip</th>
+									<th>用户状态</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="center"><input type="checkbox" name="pid" id="" /></td>
+									<td align="center"><span class="glyphicon glyphicon-user"></span></td>
+									<td>孙帅</td>
+									<td>sun@zparkhr.com.cn</td>
+									<td>15567676678</td>
+									<td>2000年1月10日</td>
+									<td>2018年1月1日</td>
+									<td>vip3</td>
+									<td><span style="color:green">可用</span></td>
+									<td>
+										<div class="btn-group" role="group">
+											<button type="button" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove-circle"></span> 冻结</button>
+										<a href="ModifyPassword.html">
+											<button type="button" class="btn btn-primary btn-sm" ><span class="glyphicon glyphicon-edit"></span> 修改密码</button>
+										</a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td align="center"><input type="checkbox" name="pid" id="" /></td>
+									<td align="center"><span class="glyphicon glyphicon-user"></span></td>
+									<td>胡鑫喆</td>
+									<td>sun@zparkhr.com.cn</td>
+									<td>15567676678</td>
+									<td>2000年1月10日</td>
+									<td>2018年1月1日</td>
+									<td>vip3</td>
+									<td><span style="color:green">可用</span></td>
+									<td>
+										<div class="btn-group" role="group">
+											<button type="button" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove-circle"></span> 冻结</button>
+										<a href="ModifyPassword.html">
+											<button type="button" class="btn btn-primary btn-sm" ><span class="glyphicon glyphicon-edit"></span> 修改密码</button>
+										</a>
+										</div>
+									</td>
+								</tr>
+								
+								<tr>
+									<td align="center"><input type="checkbox" name="pid" id="" /></td>
+									<td align="center"><span class="glyphicon glyphicon-user"></span></td>
+									<td>郑春光</td>
+									<td>sun@zparkhr.com.cn</td>
+									<td>15567676678</td>
+									<td>2000年1月10日</td>
+									<td>2018年1月1日</td>
+									<td>vip1</td>
+									<td><span style="color:red">冻结</span></td>
+									<td>
+										<div class="btn-group" role="group">
+											<button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-upload"></span> 解冻</button>
+										<a href="ModifyPassword.html">
+											<button type="button" class="btn btn-primary btn-sm" ><span class="glyphicon glyphicon-edit"></span> 修改密码</button>
+										</a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td align="center"><input type="checkbox" name="pid" id="" /></td>
+									<td align="center"><span class="glyphicon glyphicon-user"></span></td>
+									<td>王宇希</td>
+									<td>sun@zparkhr.com.cn</td>
+									<td>15567676678</td>
+									<td>2000年1月10日</td>
+									<td>2018年1月1日</td>
+									<td>vip2</td>
+									<td><span style="color:red">冻结</span></td>
+									<td>
+										<div class="btn-group" role="group">
+											<button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-upload"></span> 解冻</button>
+										<a href="ModifyPassword.html">
+											<button type="button" class="btn btn-primary btn-sm" ><span class="glyphicon glyphicon-edit"></span> 修改密码</button>
+										</a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td align="center"><input type="checkbox" name="pid" id="" /></td>
+									<td align="center"><span class="glyphicon glyphicon-user"></span></td>
+									<td>赵鹏飞</td>
+									<td>sun@zparkhr.com.cn</td>
+									<td>15567676678</td>
+									<td>2000年1月10日</td>
+									<td>2018年1月1日</td>
+									<td>vip0</td>
+									<td><span style="color:green">可用</span></td>
+									<td>
+										<div class="btn-group" role="group">
+											<button type="button" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove-circle"></span> 冻结</button>
+										<a href="ModifyPassword.html">
+											<button type="button" class="btn btn-primary btn-sm" ><span class="glyphicon glyphicon-edit"></span> 修改密码</button>
+										</a>
+										</div>
+									</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+					<div>
+						<nav>
+							<ul class="pager">
+								<li style="">
+									<a href="#">首页</a>
+								</li>
+								<li>
+									<a href="#">上一页</a>
+								</li>
+								<li>
+									<a href="#" class="btn disabled">1</a>
+								</li>
+								<li>
+									<a href="#">下一页</a>
+								</li>
+								<li >
+									<a href="#">尾页</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="../../js/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="../../js/bootstrap.min.js"></script>
+		<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+		<script src="../../assets/js/vendor/holder.js" tppabs="http://v3.bootcss.com/assets/js/vendor/holder.js"></script>
+	</body>
+
+</html>
